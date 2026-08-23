@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>Veylora Palawan Transport</title>
 <meta name="description" content="Comfortable, reliable and private transportation for your Palawan adventures.">
 <style>
@@ -12,17 +13,17 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#164f58;background:#f
 nav{position:sticky;top:0;z-index:10;background:#fff;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.08)}
 .brand{font-weight:800;font-size:24px;line-height:1.25}
 .btn,.primary{display:inline-block;background:#e9782b;color:#fff;text-decoration:none;font-weight:700;border-radius:40px;padding:16px 28px}
-.hero{min-height:78vh;background:#a8bfc1;display:flex;align-items:center;justify-content:center;text-align:center;padding:70px 20px}
-.hero h1{font-size:clamp(48px,8vw,82px);margin:0 0 25px;color:#fff}
+.hero{min-height:82vh;background:linear-gradient(135deg,#164f58 0%,#247b83 55%,#e9782b 140%);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;position:relative;overflow:hidden}.hero:before{content:'PALAWAN • PRIVATE TRANSFERS • TOURS';position:absolute;top:28px;left:0;right:0;color:rgba(255,255,255,.8);font-size:13px;font-weight:800;letter-spacing:2px}.hero>div{max-width:1000px;position:relative;z-index:1}.hero .eyebrow{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:9px 16px;border-radius:999px;color:#fff;font-weight:700;margin-bottom:22px}.hero .trust{margin-top:22px;font-size:16px;color:rgba(255,255,255,.9)}
+.hero h1{font-size:clamp(44px,8vw,82px);line-height:1.02;margin:0 0 25px;color:#fff}
 .hero p{font-size:clamp(22px,3.5vw,34px);line-height:1.45;color:#fff;max-width:850px;margin:0 auto 35px}
 .buttons{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
 .secondary{display:inline-block;background:#fff;color:#164f58;border:3px solid #164f58;text-decoration:none;font-weight:700;border-radius:40px;padding:14px 28px}
 section{padding:85px 6%}
 section:nth-of-type(even){background:#f8efe6}
 .section-title{text-align:center;font-size:clamp(42px,6vw,64px);margin:0 0 15px}
-.subtitle{text-align:center;font-size:24px;line-height:1.5;margin:0 auto 50px;max-width:800px;color:#294e54}
+.subtitle{text-align:center;font-size:22px;line-height:1.55;margin:0 auto 50px;max-width:800px;color:#294e54}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;max-width:1100px;margin:auto}
-.card{background:#fff;border:1px solid #dbe7e5;border-radius:28px;padding:38px;box-shadow:0 8px 25px rgba(22,79,88,.08)}
+.card{background:#fff;border:1px solid #dbe7e5;border-radius:28px;padding:34px;box-shadow:0 8px 25px rgba(22,79,88,.08);transition:transform .2s ease,box-shadow .2s ease}.card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(22,79,88,.13)}
 .card h3{font-size:29px;margin:0 0 18px}
 .card p{font-size:20px;line-height:1.6;color:#61777b;margin:0}
 .rate-card{background:#fff;border:1px solid #dbe7e5;border-radius:28px;padding:35px 40px;box-shadow:0 8px 25px rgba(22,79,88,.08)}
@@ -42,15 +43,16 @@ footer p{margin:8px 0}
 
 <nav>
   <div class="brand">VEYLORA PALAWAN<br>TRANSPORT</div>
-  <a class="btn" href="https://wa.me/639318870567">WhatsApp</a>
+  <a class="btn" href="https://api.whatsapp.com/send?phone=639318870567&text=Hello%20Veylora%20Palawan%20Transport%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </nav>
 
 <header class="hero">
   <div>
+    <div class="eyebrow">YOUR PALAWAN JOURNEY STARTS HERE</div>
     <h1>Ride Beyond<br>the Roads.</h1>
     <p>Comfortable, reliable and private transportation for your Palawan adventures.</p>
     <div class="buttons">
-      <a class="primary" href="https://wa.me/639318870567">Book via WhatsApp</a>
+      <a class="primary" href="https://api.whatsapp.com/send?phone=639318870567&text=Hello%20Veylora%20Palawan%20Transport%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer">Book via WhatsApp</a>
       <a class="secondary" href="#services">View Services</a>
     </div>
   </div>
@@ -91,52 +93,59 @@ footer p{margin:8px 0}
 </section>
 
 <section id="tours">
-  <h2 class="section-title">Tour Rates</h2>
-  <p class="subtitle">Explore Palawan with our tour options.</p>
+  <h2 class="section-title">Palawan Tours</h2>
+  <p class="subtitle">Discover beautiful destinations with comfortable, convenient tour transportation. <strong>Tour rates shown are per person (per pax).</strong></p>
+
+  <h3 style="text-align:center;font-size:30px;margin:10px 0 25px;">Puerto Princesa</h3>
   <div class="grid">
-    <div class="rate-card tour-card"><h3>Underground River</h3><div class="price">₱2,200</div></div>
-    <div class="rate-card tour-card"><h3>Honda Bay</h3><div class="price">₱1,700</div></div>
-    <div class="rate-card tour-card"><h3>City Tour</h3><div class="price">₱700</div></div>
-    <div class="rate-card tour-card"><h3>El Nido Tour A</h3><div class="price">₱1,500</div></div>
-    <div class="rate-card tour-card"><h3>El Nido Tour B</h3><div class="price">₱1,600</div></div>
-    <div class="rate-card tour-card"><h3>El Nido Tour C</h3><div class="price">₱1,700</div></div>
-    <div class="rate-card tour-card"><h3>El Nido Tour D</h3><div class="price">₱1,700</div></div>
+    <div class="rate-card tour-card"><h3>🌊 Underground River</h3><div class="price">₱2,200 / pax</div><p>Explore one of Palawan's most iconic natural attractions.</p></div>
+    <div class="rate-card tour-card"><h3>🏝️ Honda Bay</h3><div class="price">₱1,700 / pax</div><p>Enjoy island-hopping, clear waters and tropical scenery.</p></div>
+    <div class="rate-card tour-card"><h3>🌴 Puerto Princesa City Tour</h3><div class="price">₱700 / pax</div><p>Discover the city's popular sights and local attractions.</p></div>
+  </div>
+
+  <h3 style="text-align:center;font-size:30px;margin:55px 0 25px;">El Nido</h3>
+  <div class="grid">
+    <div class="rate-card tour-card"><h3>Tour A</h3><div class="price">₱1,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour B</h3><div class="price">₱1,600 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour C</h3><div class="price">₱1,700 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour D</h3><div class="price">₱1,700 / pax</div></div>
   </div>
 </section>
 
 <section id="port-barton">
-  <h2 class="section-title">Port Barton Tour Rates</h2>
-  <p class="subtitle">Private transportation and tour options.</p>
+  <h2 class="section-title">Port Barton Tours</h2>
+  <p class="subtitle">Simple and convenient options for your Port Barton adventure. <strong>Rates shown are per person (per pax).</strong></p>
   <div class="grid">
-    <div class="rate-card tour-card"><h3>Port Barton Tour A</h3><div class="price">₱1,500</div></div>
-    <div class="rate-card tour-card"><h3>Port Barton Tour B</h3><div class="price">₱1,500</div></div>
-    <div class="rate-card tour-card"><h3>Port Barton Tour C</h3><div class="price">₱1,500</div></div>
-    <div class="rate-card tour-card"><h3>Port Barton Tour D</h3><div class="price">₱1,500</div></div>
+    <div class="rate-card tour-card"><h3>Tour A</h3><div class="price">₱1,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour B</h3><div class="price">₱1,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour C</h3><div class="price">₱1,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour D</h3><div class="price">₱1,500 / pax</div></div>
   </div>
 </section>
 
 <section id="coron">
-  <h2 class="section-title">Coron Tour Rates</h2>
-  <p class="subtitle">Explore Coron with comfortable private transportation.</p>
+  <h2 class="section-title">Coron Tours</h2>
+  <p class="subtitle">Explore Coron with comfortable and convenient tour options. <strong>Rates shown are per person (per pax).</strong></p>
   <div class="grid">
-    <div class="rate-card tour-card"><h3>Town Tour</h3><div class="price">₱900</div></div>
-    <div class="rate-card tour-card"><h3>Tour A</h3><div class="price">₱1,500</div></div>
-    <div class="rate-card tour-card"><h3>Tour B</h3><div class="price">₱1,700</div></div>
-    <div class="rate-card tour-card"><h3>Ultimate Tour</h3><div class="price">₱2,000</div></div>
-    <div class="rate-card tour-card"><h3>Super Ultimate Tour</h3><div class="price">₱2,200</div></div>
-    <div class="rate-card tour-card"><h3>Island Escapade Tour</h3><div class="price">₱1,900</div></div>
-    <div class="rate-card tour-card"><h3>Reef and Wrecks</h3><div class="price">₱1,900</div></div>
-    <div class="rate-card tour-card"><h3>Calauit Safari Tour</h3><div class="price">₱3,000</div></div>
+    <div class="rate-card tour-card"><h3>Town Tour</h3><div class="price">₱900 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour A</h3><div class="price">₱1,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Tour B</h3><div class="price">₱1,700 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Ultimate Tour</h3><div class="price">₱2,000 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Super Ultimate Tour</h3><div class="price">₱2,200 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Island Escapade</h3><div class="price">₱1,900 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Reef &amp; Wrecks</h3><div class="price">₱1,900 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Calauit Safari</h3><div class="price">₱3,000 / pax</div></div>
   </div>
 </section>
 
 <section id="special-rates">
   <h2 class="section-title">Special Rates</h2>
+  <p class="subtitle"><strong>All rates below are per person (per pax).</strong></p>
   <div class="grid">
-    <div class="rate-card tour-card"><h3>Airport Transfer — Coron</h3><div class="price">₱3,500</div></div>
-    <div class="rate-card tour-card"><h3>Balabac — 3 Days</h3><div class="price">₱12,500</div></div>
-    <div class="rate-card tour-card"><h3>Balabac — 4 Days</h3><div class="price">₱14,500</div></div>
-    <div class="rate-card tour-card"><h3>Balabac — 5 Days</h3><div class="price">₱15,000</div></div>
+    <div class="rate-card tour-card"><h3>Airport Transfer — Coron</h3><div class="price">₱3,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Balabac — 3 Days</h3><div class="price">₱12,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Balabac — 4 Days</h3><div class="price">₱14,500 / pax</div></div>
+    <div class="rate-card tour-card"><h3>Balabac — 5 Days</h3><div class="price">₱15,000 / pax</div></div>
   </div>
 </section>
 
@@ -144,7 +153,7 @@ footer p{margin:8px 0}
   <h2>Veylora Palawan Transport</h2>
   <p>Comfortable • Reliable • Private</p>
   <p>Book your ride through WhatsApp.</p>
-  <a class="btn" href="https://wa.me/639318870567">Contact via WhatsApp</a>
+  <a class="btn" href="https://api.whatsapp.com/send?phone=639318870567&text=Hello%20Veylora%20Palawan%20Transport%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener noreferrer">Contact via WhatsApp</a>
 </footer>
 
 </body>
